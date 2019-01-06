@@ -1,10 +1,12 @@
-var shoppingList = [];
-var form = document.getElementById('shopping-form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    var input = document.getElementById('input-form').value;
+const shoppingList = [];
+const form = document.querySelector('#shopping-form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let input = document.querySelector('#input-form').value;
     shoppingList.push(input);
-    document.getElementById('list').innerHTML = shoppingList;
+    document.querySelector('#list').innerHTML = shoppingList;
 });
 
 
